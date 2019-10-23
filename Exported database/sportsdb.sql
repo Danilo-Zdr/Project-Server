@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2019 at 03:46 PM
+-- Generation Time: Oct 23, 2019 at 09:16 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -60,7 +60,7 @@ CREATE TABLE `scorelines` (
   `id` int(11) NOT NULL COMMENT 'ID of score timeline',
   `match_id` int(11) NOT NULL COMMENT 'Id of match',
   `score` varchar(20) NOT NULL COMMENT 'End game score',
-  `time` datetime NOT NULL COMMENT 'Time of score change'
+  `time` datetime NOT NULL COMMENT 'Time'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `scorelines` (
 
 INSERT INTO `scorelines` (`id`, `match_id`, `score`, `time`) VALUES
 (1, 1, '96:92', '2019-08-19 06:05:00'),
-(2, 2, '2:3', '2019-08-19 14:00:00'),
+(2, 2, '2:3', '2019-10-09 19:50:00'),
 (3, 5, '15:17', '2019-09-27 09:15:00'),
 (4, 6, '2:0', '2019-08-31 10:30:00');
 
@@ -94,7 +94,8 @@ INSERT INTO `teams` (`id`, `name`) VALUES
 (3, 'Manchester'),
 (4, 'Liverpool'),
 (5, 'Chelsea'),
-(6, 'Paok');
+(6, 'Paok'),
+(7, 'Bayern Munich');
 
 -- --------------------------------------------------------
 
@@ -169,7 +170,7 @@ ALTER TABLE `scorelines`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Team ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Team ID', AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `types`
